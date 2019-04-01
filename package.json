@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "electron-reload": "^1.4.0",
-    "electron-store": "^3.0.0"
+    "electron-store": "^3.0.0",
+    "todomvc-app-css": "^2.2.0",
+    "todomvc-common": "^1.0.5"
   }
 }
