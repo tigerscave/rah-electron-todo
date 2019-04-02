@@ -7,31 +7,44 @@
     <title>Electron Todo</title>
     <link rel="stylesheet" href="../../node_modules/todomvc-common/base.css">
     <link rel="stylesheet" href="../../node_modules/todomvc-app-css/index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="todoapp">
-        <header class="header">
-            <h1>Todos</h1>
-            <input class="new-todo" placeholder="What needs to be done?" autofocus>
-        </header>
-
-        <section class="main">
-            <input class="toggle-all" type="checkbox">
-            <label for="toggle-all">Mark all as complete</label>
-            <ul class="todo-list"></ul>
-        </section>
-
-        <footer class="footer">
-            <span class="todo-count"></span>
-            <ul class="filters">
-                <li><a href="#/" class="selected">All</a></li>
-                <li><a href="#/active">Active</a></li>
-                <li><a href="#/completed">Completed</a></li>
-            </ul>
-            <button class="clear-completed">Clear completed</button>
-        </footer>
+<section class="todoapp">
+    <header class="header">
+        <h1>Todos</h1>
+        <div class="add-todo">
+            <input class="new-todo" id="todoInput" placeholder="What needs to be done?" autofocus>
+            <button id="addTodoButton" class="add-button">ADD TODO</button>
+        </div>
+    
+    </header>
+    
+    <section class="main">
+        <input class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list" id="todo-list">
+            <li data-id="{{id}}" class="{{completed}}">
+                <div class="view">
+                    <input class="toggle" type="checkbox" {{checked}}>
+                    <label>{{title}}</label>
+                    <button class="destroy"></button>
+                </div>
+            </li>
+        </ul>
     </section>
+    
+    <footer class="footer">
+        <span class="todo-count"></span>
+        <ul class="filters">
+            <li><a href="#/" class="selected">All</a></li>
+            <li><a href="#/active">Active</a></li>
+            <li><a href="#/completed">Completed</a></li>
+        </ul>
+        <button class="clear-completed">Clear completed</button>
+    </footer>
+</section>
 
 <div class="container">
     <div class="columns">

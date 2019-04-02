@@ -1,0 +1,8 @@
+.add-todo {
+    display: flex;
+}
+
+.add-button {
+    background: hotpink;
+    color: azure;
+}
